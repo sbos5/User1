@@ -1,0 +1,13 @@
+{# empty Twig template #}
+<div><h3>AUTO-PARAMETRY</h3>
+</div>
+
+
+    
+    {{ auto.id }}
+    {{ auto.marka }}
+    {{ auto.rok_prod | date('Y') }}
+    {{ auto.color }}
+    <br><br>
+ <div> <a href="{{ path('new_auto') }}">utwórz nowy model auta</a></div><br>
+ <div> <a href="{{ path('auto') }}">wykaz aut</a></div><br>

@@ -1,0 +1,23 @@
+{# empty Twig template #}
+<h2> WYKAZ AUT</h2>
+<table style=" border: 1px solid black;">
+    <tr style=" border: 1px solid black;">
+        <th style=" border: 1px solid black;">ID</th>
+         <th style=" border: 1px solid black;">Marka</th>
+          <th style=" border: 1px solid black;">Rok Prod.</th>
+           <th style=" border: 1px solid black;">Kolor</th>
+    </tr>   
+{% for auta in auto %}
+<tr>
+    <td style=" border: 1px solid black;"> {{ auta.id }}</td>
+     <td style=" border: 1px solid black;">{{ auta.marka }}</td>
+     <td style=" border: 1px solid black;">{{ auta.rok_prod | date('Y') }}</td>
+     <td style=" border: 1px solid black;">{{ auta.color }}</td>
+    <td style=" border: 1px solid black;"> <a href="{{ path('auto1' ,{id: auta.id}) }}" >Pokaż</a></td>
+     <td style=" border: 1px solid black;"> <a href="{{ path('delete' ,{id: auta.id}) }}" >Usuń</a></td>
+     <td style=" border: 1px solid black;"> <a href="{{ path('auto5' ,{id: auta.id}) }}" >Edytuj</a></td>
+</tr>  
+  {% endfor %}  
+</table>  
+<br><br>
+<div> <a href="{{ path('new_auto') }}">utwórz nowy model auta</a></div><br>

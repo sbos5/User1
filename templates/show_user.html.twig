@@ -1,0 +1,20 @@
+{# empty Twig template #}
+<div><h2>STRONA UŻYTKOWNIKÓW</h2></div>
+<div> <a href="{{ path('show_customers') }}">Lista UserS</a></div><br>
+<div> <a href="{{ path('strona1') }}">strona1</a></div><br>
+<div> <a href="{{ path('new_customer') }}">DODAJ NOWEGO UŻYTKOWNIKA DO BAZY DANYCH</a></div><br>
+<div> <a href="{{ path('show_customers') }}">Lista UserS</a></div><br>
+<table  style=" border: 1px solid black;" >
+    
+{% for tabs in tab %}
+    <tr>
+     <td style=" border: 1px solid black;"> {{ tabs.id }}</td>
+    <td style=" border: 1px solid black;"> {{ tabs.name }}</td>
+    <td style=" border: 1px solid black;"> {{ tabs.surname }}</td>
+    <td style=" border: 1px solid black;"> {{ tabs.email }}</td>
+    <td style=" border: 1px solid black;"> {{ tabs.phone }}</td>
+</tr>
+    {% endfor %}
+</table>  
+<br><br>
+<div> <a href="{{ path('domy') }}">Lista Domów</a></div>
